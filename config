@@ -156,7 +156,7 @@ bindsym $mod+r mode "resize"
 # }
 bar {
     font pango:Source Sans Pro-10 11
-    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command CONTRIB_DIR=~/.config/i3/i3blocks-contrib i3blocks -c ~/.config/i3/i3blocks.conf
   colors {
     separator #268bd2
     background #002b36
