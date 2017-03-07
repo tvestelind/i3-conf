@@ -1,3 +1,0 @@
-[submodule "i3blocks-battery"]
-	path = i3blocks-battery
-	url = git@github.com:kb100/i3blocks-battery.git
