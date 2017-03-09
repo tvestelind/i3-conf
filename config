@@ -30,17 +30,19 @@ font pango:monospace 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec uxterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec rofi -show run
+
+# lock screen
+bindsym $mod+Control+l exec ~/.config/i3/bin/lock
+
+# suspend computer
+bindsym $mod+Control+s exec systemctl suspend
 
 # change focus
 bindsym $mod+h focus left
@@ -93,11 +95,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1 firefox
-bindsym $mod+2 workspace 2 icedove + slack
-bindsym $mod+3 workspace 3 keepass
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+1 workspace 1: mail+stack
+bindsym $mod+2 workspace 2: firefox
+bindsym $mod+3 workspace 3: spotify+irssi
+bindsym $mod+4 workspace 4: virtualbox
+bindsym $mod+5 workspace 5: keepass
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -105,11 +107,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1 firefox
-bindsym $mod+Shift+2 move container to workspace 2 icedove + slack
-bindsym $mod+Shift+3 move container to workspace 3 keepass
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+1 move container to workspace 1: mail+stack
+bindsym $mod+Shift+2 move container to workspace 2: firefox
+bindsym $mod+Shift+3 move container to workspace 3: spotify+irssi
+bindsym $mod+Shift+4 move container to workspace 4: virtualbox
+bindsym $mod+Shift+5 move container to workspace 5: keepass
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -156,6 +158,7 @@ bindsym $mod+r mode "resize"
 # }
 bar {
     font pango:Source Sans Pro-10 11
+    position       top
     status_command CONTRIB_DIR=~/.config/i3/i3blocks-contrib i3blocks -c ~/.config/i3/i3blocks.conf
   colors {
     separator #268bd2
@@ -171,3 +174,9 @@ client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
 client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
 client.unfocused #073642 #073642 #93a1a1 #586e75
 client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+
+exec nm-applet
+exec icedove; [class="icedove"] move workspace "1: mail+slack"
+exec slack; [class="slack"] move workspace "1: mail+slack"
+exec firefox; [class="firefox"] move workspace "2: firefox"
+exec virtualbox; [class="virtualbox"] move workspace "4: virtualbox"
