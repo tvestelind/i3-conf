@@ -39,7 +39,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # lock screen
-bindsym $mod+Control+l exec ~/.config/i3/bin/lock
+bindsym $mod+Control+l exec i3lock
 
 # suspend computer
 bindsym $mod+Control+s exec systemctl suspend
