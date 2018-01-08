@@ -3,14 +3,14 @@
 apt install i3-blocks rofi
 ### i3blocks ###
 #### monitor manager ####
-apt-get install python3-tk arandr
+apt install python3-tk arandr
 #### temp ####
-apt-get install lm-sensors
+apt install lm-sensors
 #### ssid ####
-sudo ln -s /usr/sbin/iw /usr/bin/iw && sudo chmod +x /usr/bin/iw
+sudo ln -s $(sudo which iw) /usr/bin/iw && sudo chmod +x /usr/bin/iw
 #### mediaplayer ####
 wget https://github.com/acrisci/playerctl/releases/download/v0.5.0/playerctl-0.5.0_amd64.deb
-dpkg -i playerctl-0.5.0_amd64.deb
+sudo dpkg -i playerctl-0.5.0_amd64.deb
 rm playerctl-0.5.0_amd64.deb
 #### contrib repo ####
 git submodule init && git submodule update --recursive
