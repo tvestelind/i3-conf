@@ -1,0 +1,15 @@
+// vim:ts=4:sw=4:et
+{
+    "layout": "splitv",
+    "percent": 1,
+    "nodes": [
+        {
+            "swallows": [
+               {
+                  "class": "^KeePass2$",
+                  "instance": "^keepass2$"
+               }
+            ]
+        }
+    ]
+}

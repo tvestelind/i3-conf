@@ -1,0 +1,15 @@
+// vim:ts=4:sw=4:et
+{
+    "layout": "splitv",
+    "percent": 0.5,
+    "nodes": [
+        {
+            "swallows": [
+               {
+                  "class": "^Firefox-esr$",
+                  "instance": "^Navigator$"
+               }
+            ]
+        }
+    ]
+}
