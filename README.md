@@ -1,6 +1,6 @@
 # Install #
 ## Debian ##
-apt-get install i3-blocks
+apt install i3-blocks rofi
 ### i3blocks ###
 #### monitor manager ####
 apt-get install python3-tk arandr
