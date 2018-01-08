@@ -39,10 +39,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # lock screen
-bindsym $mod+Control+l exec i3lock
+bindsym $mod+Control+l exec i3lock --image ~/Wallpapers/linux.png
 
 # suspend computer
-bindsym $mod+Control+s exec systemctl suspend
+bindsym $mod+Control+s exec 'i3lock --image ~/Wallpapers/linux.png && systemctl suspend'
 
 # change focus
 bindsym $mod+h focus left
