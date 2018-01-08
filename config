@@ -176,6 +176,7 @@ client.unfocused #073642 #073642 #93a1a1 #586e75
 client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 exec nm-applet
+exec dropbox start
 exec icedove; [class="icedove"] move workspace "1: mail+slack"
 exec slack; [class="slack"] move workspace "1: mail+slack"
 exec firefox; [class="firefox"] move workspace "2: firefox"
