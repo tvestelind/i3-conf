@@ -46,7 +46,7 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+Control+l exec i3lock --image ~/Wallpapers/linux.png
 
 # suspend computer
-bindsym $mod+Control+s exec 'i3lock --image ~/Wallpapers/linux.png && systemctl suspend'
+bindsym $mod+Control+s exec systemctl suspend
 
 # change focus
 bindsym $mod+h focus left
