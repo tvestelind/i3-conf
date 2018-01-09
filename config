@@ -14,6 +14,7 @@ set $ws1 1: mail+slack
 set $ws2 2: firefox
 set $ws3 3: spotify
 set $ws4 4: keepass
+set $lock i3lock --image /home/tvestelind/Wallpapers/linux.png
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -43,10 +44,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # lock screen
-bindsym $mod+Control+l exec i3lock --image ~/Wallpapers/linux.png
+bindsym $mod+Control+l exec $lock
 
 # suspend computer
-bindsym $mod+Control+s exec systemctl suspend
+bindsym $mod+Control+s exec --no-startup-id "$lock && systemctl suspend"
 
 # change focus
 bindsym $mod+h focus left
