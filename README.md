@@ -2,7 +2,7 @@
 
 ## Debian ##
 ```bash
-apt install i3-blocks rofi
+apt install i3-blocks rofi xautolock
 ```
 
 ### i3blocks ###
