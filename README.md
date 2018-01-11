@@ -5,6 +5,11 @@
 apt install i3-blocks rofi xautolock
 ```
 
+## From source
+```bash
+git clone https://github.com/haikarainen/light.git &&  make && sudo make install
+```
+
 ### i3blocks ###
 #### monitor manager ####
 ```bash
