@@ -14,7 +14,7 @@ set $ws1 1: mail+slack
 set $ws2 2: firefox
 set $ws3 3: spotify
 set $ws4 4: keepass
-set $lock i3lock --image /home/tvestelind/Wallpapers/linux.png
+set $lock i3lock --image $HOME/Wallpapers/linux.png --no-unlock-indicator
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -206,5 +206,5 @@ exec icedove
 exec slack
 exec firefox
 # spotify doesn't set class and instance at the correct time. Use spotifywm (search Github) to make it do so.
-exec LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libcurl.so.3:/home/tvestelind/repos/spotifywm/spotifywm.so /usr/share/spotify/spotify
+exec LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libcurl.so.3:$HOME/repos/spotifywm/spotifywm.so /usr/share/spotify/spotify
 exec keepass2
