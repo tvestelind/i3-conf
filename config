@@ -14,7 +14,6 @@ set $ws1 1: mail+slack
 set $ws2 2: firefox
 set $ws3 3: spotify
 set $ws4 4: keepass
-set $lock i3lock --image $(find ~/Wallpapers/lock_wallpapers -name '*.png' | shuf -n1)
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -44,10 +43,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 
 # lock screen
-bindsym $mod+Control+l exec $lock
+bindsym $mod+Control+l exec xautolock -locknow
 
 # suspend computer
-bindsym $mod+Control+s exec --no-startup-id "$lock && systemctl suspend"
+bindsym $mod+Control+s exec --no-startup-id xautolock -locknow && systemctl suspend
 
 # change focus
 bindsym $mod+h focus left
@@ -195,7 +194,7 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 exec nm-applet
 exec dropbox start
-exec xautolock -time 5 -locker '$lock' -notify 30 -notifier 'notify-send "xautolock" "locking in 30 seconds"'
+exec xautolock -time 5 -locker 'i3lock --image $(find ~/Wallpapers/lock_wallpapers -name "*.png" || echo "noimage" | shuf -n1)' -notify 30 -notifier 'notify-send "xautolock" "locking in 30 seconds"'
 
 exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/layouts/workspace-mail-slack.json'"
 exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/layouts/workspace-firefox.json'"
