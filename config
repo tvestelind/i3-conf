@@ -194,7 +194,7 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 
 exec nm-applet
 exec dropbox start
-exec xautolock -time 5 -locker 'i3lock --image $(find ~/Wallpapers/lock_wallpapers -name "*.png" || echo "noimage" | shuf -n1)' -notify 30 -notifier 'notify-send "xautolock" "locking in 30 seconds"'
+exec xautolock -time 5 -locker 'i3lock --image ~/Wallpapers/haskell-space-resized-png' -notify 30 -notifier 'notify-send "xautolock" "locking in 30 seconds"'
 
 exec --no-startup-id "i3-msg 'workspace $ws1; append_layout ~/.config/i3/layouts/workspace-mail-slack.json'"
 exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/.config/i3/layouts/workspace-firefox.json'"
