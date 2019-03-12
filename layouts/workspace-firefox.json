@@ -6,7 +6,7 @@
         {
             "swallows": [
                {
-                  "class": "^Firefox-esr$",
+                  "class": "^Firefox$",
                   "instance": "^Navigator$"
                }
             ]
