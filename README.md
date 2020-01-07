@@ -1,8 +1,8 @@
 # Install #
 
 ## Debian ##
-```bash
-apt install i3-blocks rofi xautolock
+```bas
+apt install i3-blocks rofi xautolock keepassxc
 ```
 
 ## From source

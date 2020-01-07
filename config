@@ -9,14 +9,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 set $ws1 1: mail+slack
 set $ws2 2: firefox
 set $ws3 3: spotify
 set $ws4 4: keepass
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+
 font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -206,4 +205,4 @@ exec slack
 exec firefox
 # spotify doesn't set class and instance at the correct time. Use spotifywm (search Github) to make it do so.
 exec LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libcurl.so.3:$HOME/repos/spotifywm/spotifywm.so /usr/share/spotify/spotify
-exec keepass2
+exec keepassxc
