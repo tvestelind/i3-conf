@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 set $ws1 1: mail+slack
 set $ws2 2: firefox
 set $ws3 3: spotify
@@ -206,4 +206,6 @@ exec slack
 exec firefox
 # spotify doesn't set class and instance at the correct time. Use spotifywm (search Github) to make it do so.
 exec LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libcurl.so.3:$HOME/repos/spotifywm/spotifywm.so /usr/share/spotify/spotify
-exec keepass2
+exec keepassxc
+exec flameshot
+exec blueman-applet

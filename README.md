@@ -1,13 +1,18 @@
 # Install #
 
 ## Debian ##
+i3
 ```bash
 apt install i3-blocks rofi xautolock
+```
+useful applications
+```bash
+apt install flameshot blueman-applet keepassxc slack icedove firefox
 ```
 
 ## From source
 ```bash
-git clone https://github.com/haikarainen/light.git &&  make && sudo make install
+git clone https://github.com/haikarainen/light.git /tmp/light && cd /tmp/light && make && sudo make install
 ```
 
 ### i3blocks ###
